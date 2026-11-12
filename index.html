@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>OOTDBuy spreadsheet : tailles, photos QC et liens par catégorie</title>
+  <meta name="description" content="Guide en français pour lire un OOTDBuy spreadsheet, comparer les tailles et les photos QC, puis explorer dix catégories sur HipobuyFind.">
+  <meta name="theme-color" content="#242033">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="OOTDBuy spreadsheet : le guide de lecture">
+  <meta property="og:description" content="Trouvez la bonne catégorie et vérifiez les mesures, le coloris et le coût total avant de commander.">
+  <style>
+    :root{color-scheme:light;--fond:#f6f4ef;--texte:#242033;--accent:#503286;--bord:#d8d1dd}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--fond);color:var(--texte);font:1rem/1.65 system-ui,sans-serif}
+    .wrap{width:min(100% - 2rem,68rem);margin-inline:auto}
+    header,footer{background:var(--texte);color:#fff}
+    header .wrap,footer .wrap{padding-block:.85rem}
+    header a,footer a{color:inherit}
+    a{color:var(--accent);text-underline-offset:.2em}
+    a:focus-visible,summary:focus-visible{outline:3px solid #9b60ed;outline-offset:4px}
+    h1,h2,h3{line-height:1.12;margin:0 0 .65rem}
+    h1{font-size:clamp(2.3rem,6vw,5rem);letter-spacing:-.055em}
+    h2{font-size:clamp(1.55rem,3vw,2.25rem)}
+    h3{font-size:1.25rem}
+    p{margin:.5rem 0 1rem}
+    section{margin-block:2rem}
+    .hero{display:grid;grid-template-columns:1.25fr 1fr;gap:1.5rem;align-items:center}
+    .hero p{max-width:52ch}
+    figure{margin:0}
+    img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:contain;background:#eee9f3;border-radius:.6rem}
+    figcaption{margin-top:.35rem;font-size:.9rem}
+    .cats,.gallery,.guides{display:grid;gap:.65rem}
+    .cats{grid-template-columns:repeat(5,minmax(0,1fr));padding:0;list-style:none}
+    .cats a,.button{display:block;padding:.65rem .8rem;border:1px solid var(--bord);border-radius:.45rem;background:#fff;font-weight:650}
+    .button{display:inline-block;background:var(--accent);color:#fff}
+    .gallery{grid-template-columns:repeat(4,minmax(0,1fr))}
+    .guides{grid-template-columns:repeat(2,minmax(0,1fr))}
+    article,details{background:#fff;border:1px solid var(--bord);border-radius:.6rem;padding:1rem}
+    article p:last-child,details p:last-child{margin-bottom:0}
+    details+details{margin-top:.55rem}
+    summary{cursor:pointer;font-weight:650}
+    @media(max-width:48rem){.hero{grid-template-columns:1fr}.cats{grid-template-columns:repeat(2,minmax(0,1fr))}.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}.guides{grid-template-columns:1fr}}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"WebPage",
+        "name":"OOTDBuy spreadsheet : le guide de lecture",
+        "inLanguage":"fr",
+        "description":"Guide pour comparer les tailles, lire les photos QC et explorer les catégories sur HipobuyFind."
+      },
+      {
+        "@type":"FAQPage",
+        "inLanguage":"fr",
+        "mainEntity":[
+          {"@type":"Question","name":"Qu’est-ce qu’un OOTDBuy spreadsheet ?","acceptedAnswer":{"@type":"Answer","text":"C’est un répertoire qui regroupe des références et des liens produits par catégorie pour faciliter la comparaison."}},
+          {"@type":"Question","name":"Que vérifier sur les photos QC ?","acceptedAnswer":{"@type":"Answer","text":"Vérifiez le coloris, les mesures, les coutures et la référence de la variante. Les photos seules ne suffisent pas à établir l’authenticité."}},
+          {"@type":"Question","name":"Où mènent les liens de ce guide ?","acceptedAnswer":{"@type":"Answer","text":"Ils ouvrent l’accueil ou les catégories de HipobuyFind. Ce guide est indépendant d’OOTDBuy."}},
+          {"@type":"Question","name":"Comment comparer deux prix avant de commander ?","acceptedAnswer":{"@type":"Answer","text":"Comparez les montants dans la même devise. Ajoutez la livraison et les frais affichés pour votre destination, puis vérifiez le total avant de payer."}}
+        ]
+      }
+    ]
+  }
+  </script>
+<link rel="canonical" href="https://kakobuyfinds.github.io/hazfa/">
+</head>
+<body>
+  <!-- index.html. Recherche : la première page de Bing n’a pas pu être vérifiée. Les thèmes ont été relevés dans dix domaines issus de la recherche web : sopel.fit, ssfinds.com, ootdbuy.org, ootdbuyspreadsheetx.com, ootdbuy.net, ootdbuyspreadsheet.net, ootdbuy.app, ootdbuy.io, ootdbuyfind.com et repsheet.net. -->
+  <header><div class="wrap"><a href="https://www.hipobuyfind.com">www.hipobuyfind.com</a></div></header>
+  <main class="wrap">
+    <section class="hero" aria-labelledby="titre">
+      <div>
+        <h1 id="titre">OOTDBuy spreadsheet</h1>
+        <p>Un répertoire de références mode se lit plus vite quand on sait quoi relever : le modèle, la variante, les mesures et le coût total. Ce guide indépendant vous aide à comparer ces informations et à explorer les catégories de HipobuyFind.</p>
+        <a class="button" href="https://www.hipobuyfind.com">Explorer HipobuyFind</a>
+      </div>
+      <figure>
+        <img src="https://www.solefly.com/cdn/shop/files/AURORA_CW2288-111_PHSRH000-2000.jpg?v=1693366202&amp;width=800" width="800" height="600" fetchpriority="high" alt="Basket Nike Air Force 1 ’07 blanche vue de profil">
+        <figcaption>Nike Air Force 1 ’07, exemple de silhouette basse.</figcaption>
+      </figure>
+    </section>
+
+    <section aria-labelledby="categories">
+      <h2 id="categories">Parcourir les catégories</h2>
+      <nav aria-label="Catégories HipobuyFind">
+        <ul class="cats">
+          <li><a href="https://hipobuyfind.com/category-911-Shoes.html">Chaussures</a></li>
+          <li><a href="https://hipobuyfind.com/category-912-Hoodies%2FSweaters.html">Sweats et pulls</a></li>
+          <li><a href="https://hipobuyfind.com/category-913-T-Shirts.html">T-shirts</a></li>
+          <li><a href="https://hipobuyfind.com/category-914-Jackets.html">Vestes</a></li>
+          <li><a href="https://hipobuyfind.com/category-915-Pants%2FShorts.html">Pantalons et shorts</a></li>
+          <li><a href="https://hipobuyfind.com/category-916-Headwear.html">Casquettes et bonnets</a></li>
+          <li><a href="https://hipobuyfind.com/category-917-Sets.html">Ensembles</a></li>
+          <li><a href="https://hipobuyfind.com/category-918-underwear%2Funderpants.html">Sous-vêtements</a></li>
+          <li><a href="https://hipobuyfind.com/category-919-Jersey.html">Maillots</a></li>
+          <li><a href="https://hipobuyfind.com/category-920-Accessories.html">Accessoires</a></li>
+        </ul>
+      </nav>
+    </section>
+
+    <section aria-labelledby="details-mode">
+      <h2 id="details-mode">Quatre détails à observer</h2>
+      <p>Ces images servent de repères visuels pour comparer la coupe, la visière, la finition et le fermoir.</p>
+      <div class="gallery">
+        <figure>
+          <img src="https://la.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-gorra-lv-get-ready--M76528_PM1_Look%20view.jpg?wid=480" width="480" height="360" loading="lazy" decoding="async" alt="Casquette Louis Vuitton LV Get Ready portée, avec visière Monogram">
+          <figcaption>Louis Vuitton · visière</figcaption>
+        </figure>
+        <figure>
+          <img src="https://cdn.clothbase.com/uploads/fbee2626-6cb6-4a42-ba6c-84182725d5f8/P00939635_b1.jpg" width="480" height="360" loading="lazy" decoding="async" alt="Casquette Gucci GG beige portée avec un sweat jaune pâle">
+          <figcaption>Gucci · motif de la toile</figcaption>
+        </figure>
+        <figure>
+          <img src="https://assets.christiandior.com/is/image/diorprod/841V01A1166X9000_E01-4?wid=480&amp;fmt=webp" width="480" height="360" loading="lazy" decoding="async" alt="Veste Bar noire Dior à taille cintrée">
+          <figcaption>Dior · coupe cintrée</figcaption>
+        </figure>
+        <figure>
+          <img src="https://www.crepslocker.com/cdn/shop/files/hermes-paris-clic-h-black-bracelet-h700001fv01pm-front.webp?v=1716898801&amp;width=480" width="480" height="360" loading="lazy" decoding="async" alt="Bracelet Hermès Clic H noir et son fermoir en H">
+          <figcaption>Hermès · fermoir</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section aria-labelledby="guides">
+      <h2 id="guides">Guides de comparaison</h2>
+      <div class="guides">
+        <article>
+          <h3>Liens produits OOTDBuy</h3>
+          <p>Quand vous ouvrez une fiche produit, comparez sa référence et le nom du modèle à ceux du répertoire. Vérifiez le coloris choisi, la variante disponible et le contenu du lot. Pour un ensemble deux pièces, vérifiez que le haut et le bas sont inclus dans la même option.</p>
+        </article>
+        <article>
+          <h3>Guide des tailles OOTDBuy</h3>
+          <p>Pour des baskets, comparez la longueur du pied en centimètres au tableau de pointures EU et vérifiez si la fiche donne aussi la longueur de semelle intérieure. Pour un sweat ou une veste, comparez la largeur à plat, la longueur des manches et le tour de poitrine à un vêtement qui vous va. Pour un pantalon, relevez le tour de taille et l’entrejambe.</p>
+        </article>
+        <article>
+          <h3>Photos QC OOTDBuy</h3>
+          <p>Les photos de contrôle qualité (QC) aident à repérer les écarts de finition. Cherchez une vue de profil de la semelle, un gros plan des coutures et, si possible, une photo avec un mètre ruban. Pour une casquette réglable, regardez la fermeture arrière. Pour un bracelet, vérifiez la longueur intérieure et le type de fermoir.</p>
+        </article>
+        <article>
+          <h3>Guide d’achat OOTDBuy</h3>
+          <p>Pour estimer le coût d’une commande, notez la devise de la fiche, les frais de livraison et les éventuels frais de service affichés. Si vous comparez deux expéditions vers la France ou la Belgique, utilisez la même destination et vérifiez le poids du colis. Consultez les conditions de retour pour la variante choisie avant le paiement.</p>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="faq">
+      <h2 id="faq">Questions fréquentes</h2>
+      <details open>
+        <summary>Qu’est-ce qu’un OOTDBuy spreadsheet ?</summary>
+        <p>C’est un répertoire qui regroupe des références et des liens produits par catégorie pour faciliter la comparaison.</p>
+      </details>
+      <details>
+        <summary>Que vérifier sur les photos QC ?</summary>
+        <p>Vérifiez le coloris, les mesures, les coutures et la référence de la variante. Les photos seules ne suffisent pas à établir l’authenticité.</p>
+      </details>
+      <details>
+        <summary>Où mènent les liens de ce guide ?</summary>
+        <p>Ils ouvrent l’accueil ou les catégories de HipobuyFind. Ce guide est indépendant d’OOTDBuy.</p>
+      </details>
+      <details>
+        <summary>Comment comparer deux prix avant de commander ?</summary>
+        <p>Comparez les montants dans la même devise. Ajoutez la livraison et les frais affichés pour votre destination, puis vérifiez le total avant de payer.</p>
+      </details>
+    </section>
+  </main>
+  <footer><div class="wrap"><a href="https://www.hipobuyfind.com">Retour au catalogue HipobuyFind</a></div></footer>
+</body>
+</html>
